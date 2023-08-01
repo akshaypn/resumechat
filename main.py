@@ -8,15 +8,39 @@ import chromadb
 from langchain.embeddings import SentenceTransformerEmbeddings
 from langchain.vectorstores import Chroma
 from load_resume import main
-from config import models
-
+from config import models, openai_api
+import openai
+from langchain.llms import OpenAI
+openai.api_key = openai_api
 
 main()
+
+def generate_answer(prompt):
+    answer = ""
+    try:
+        client = vercel_ai.Client()
+        for chunk in client.generate('openai:gpt-3.5-turbo', prompt): answer += chunk
+
+    except:
+        response = openai.Completion.create(model="text-davinci-003",
+            prompt=prompt,
+            temperature=0,
+            max_tokens=64,
+            top_p=1.0,
+            frequency_penalty=0.0,
+            presence_penalty=0.0)
+        
+        answer = response['choices'][0]['text'].strip()
+        
+
+
+    
+    return answer
+
 
 embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
 persist_directory = 'chroma_db'
 
-client = vercel_ai.Client()
 
 vectordb = Chroma(persist_directory=persist_directory, embedding_function=embeddings)
 
@@ -57,11 +81,6 @@ st.info("Write your question, choose the model (gpt-3.5 works best) and hit Answ
 query = st.text_area("Enter your question here", "Why is Akshay the ideal candidate for the Senior Machine Learning Engineer(NLP) role?\n\n\
 Write your answer with 4-5 short and sharp bullet points")
 
-curr_model = st.selectbox("Select the Language Model", models)
-
-model_params = client.model_defaults[curr_model]
-model_params['maximumLength'] = 2000
-
 
 try:
     matching_docs = vectordb.similarity_search(query)
@@ -95,12 +114,14 @@ answer = ""
 if st.button('Answer'):
     try:
         with st.spinner("Shifting Rocks.. Checking nooks and corners... Thinking hard... 🤔"):
-            for chunk in client.generate(curr_model, prompt): answer += chunk
+            answer = generate_answer(prompt)
             
             st.success("Answer Generated ✅")
             if len(answer) > 1:
                 st.write(answer)  
             else:
+                st.write("Problem with API")
                 st.exception("API timed out. Please try after a minute or choose another model.")
-    except:
+    except Exception as e:
+        st.write(e)
         st.exception("API timed out. Please try after a minute or choose another model.")

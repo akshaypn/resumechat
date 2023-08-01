@@ -9,3 +9,6 @@ models = ['openai:gpt-3.5-turbo',
           'huggingface:bigcode/santacoder',
           'cohere:command-light-nightly',
           'cohere:command-nightly']
+
+
+openai_api = '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'
