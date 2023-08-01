@@ -22,15 +22,19 @@ def generate_answer(prompt):
         for chunk in client.generate('openai:gpt-3.5-turbo', prompt): answer += chunk
 
     except:
-        response = openai.Completion.create(model="text-davinci-003",
-            prompt=prompt,
-            temperature=0,
+
+        response = openai.ChatCompletion.create(model="gpt-3.5-turbo",
+                                                messages=[
+    {"role": "system", "content": "You are a helpful assistant."},
+    {"role": "user", "content": prompt}
+  ],
+            temperature=0.7,
             max_tokens=2000,
             top_p=1.0,
             frequency_penalty=0.0,
             presence_penalty=0.0)
         
-        answer = response['choices'][0]['text'].strip()
+        answer = response.choices[0].message['content']
         
 
 
