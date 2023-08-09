@@ -19,7 +19,7 @@ def generate_answer(prompt):
     answer = ""
     try:
         client = vercel_ai.Client()
-        for chunk in client.generate('openai:gpt-3.5-turbo', prompt): answer += chunk
+        for chunk in client.generate('openai:gpt-3.5-turbo-16k', prompt): answer += chunk
 
     except:
 
@@ -45,6 +45,10 @@ def generate_answer(prompt):
 embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
 persist_directory = 'chroma_db'
 
+with open("resume.txt", 'r') as f:
+    resume = f.read()
+    resume = str(resume)
+    print(resume)
 
 vectordb = Chroma(persist_directory=persist_directory, embedding_function=embeddings)
 
@@ -101,6 +105,9 @@ try:
 
     ### Context :
     {matching_docs[0]}
+
+    ### Entire Resume :
+    {resume}
     """
 except:
     prompt = f"""You are the helpful, polite and noble assistant of Akshay P Nambiar. Always remember the following things: 
@@ -108,10 +115,14 @@ except:
     2. Answer in a well structured professional manner.
     3. If the input is derogatory, abusive or contains profanity, refuse to answer.
 
+    ### Question:
+    {query}
     
 
     ### Context :
-    The question is beyond the scope of this resume. Reply that you need more information. 
+
+    {resume}
+    
     """
 
 answer = ""

@@ -1,0 +1,66 @@
+Akshay P Nambiar Email: akshay.nambiar7@gmail.in
+Portfolio: akshaypn Mobile: +91-9521-279-646
+Github: github.com/akshaypn
+SUMMARY
+3+ years of AI/ML software development experience in EdTech and InsurTech startups. Proficient in Large Language
+Models, NLP, AI, and data analytics. Able to leverage cutting-edge technology and research to ideate and deliver
+AI-driven solutions.
+SKILLS SUMMARY
+• Languages: Python,Unix & Shell Scripting, LATEX, SQL
+• Tools & Frameworks: Numpy, Pandas, PyTorch, Transformers, Langchain, Scikit-Learn, Matplotlib, XGBoost, OpenCV,
+Huggingface, Git, Pytest, NLTK, SpaCy, Flask, Kubernetes, Docker, GIT, Airflow, AWS, GCP,
+• MLOps: Airbyte, Great Expectations, Weights & Biases, MLFlow, DVC, Sagemaker, Lambda, ECR, ECS, Docker, FastAPI, Streamlit,
+Gradio, AirFlow,
+• Technical Skills: Large Language Modelling, Deep Learning, Natural Language Processing, Model Deployment, Model APIs
+• Soft Skills: Leadership, Planning and Management, Writing, Extempore, Time Management
+WORK EXPERIENCE
+•
+Gigaforce Inc. Noida, India
+Software Engineer AI/ML - (Full-time) Oct 2022 - present
+◦ SubroGPT: Designed and curated a Custom Dataset using Falcon 40B for Subrogation Domain.Instruct fine-tuned an open
+source LLM with 7B parameters using PEFT and LoRA to perform transfer learning. Applied it to several downstream tasks
+like email generation, chain of thought answering, and context understanding.
+◦ QA Retrieval Agent: Engineered a robust QA Retrieval agent by leveraging Langchain, FastChat5B, and ChromaDB Vector
+Store. Analyzed accident descriptions and traffic laws to identify law infringements, streamlining liability determination
+alongside SubroGPT. Increased claim closure rate by 500%
+◦ Data Extraction from Police Report: Utilized openCV and Tesseract to identify and extract structured data from Police
+Reports. This automated data extraction resulted in a decrease of claim processing time by 1 hour/report.
+◦ Subro Potential Application: Created a production-ready application that could successfully analyze a claim and determine
+its subrogation potential. Used TFiDF, NER, and sentence similarity to understand the data, gather features and trained on
+historical data. Reduced the claim processing time from 100 claims/day to 10,000 claims/hour while increasing per
+claim revenue by 40%. Used Dockers to deploy the application and Airflow for scheduling and monitoring. Daily
+processing 1M+ documents to predict subrogation potential
+◦ AI Enabled Claim Document Parser: Developed an Algorithm to identify patterns and extract data from an unseen pdf
+while maintaining its structure. Went from POC to deployment in 1 month. This allowed streamlined text extraction resulting
+in significant time reduction and huge savings for clients. 250K+ documents processed till date
+◦ Impact: Successfully took several AI/ML projects from proof-of-concept to production. Developed and applied advanced
+algorithms in the domain of subrogation opportunity identification, liability analysis, and text extraction leading to
+increased subrogation efficiency and revenue for clients. Identified need for Airflow, WandB incorporation, set up and
+managed airflow and WandB to automate, schedule, monitor, and debug AI applications and artifacts
+◦ Recognition: Awarded certificate of recognition for outstanding contribution in the second quarter post-joining.
+•
+Lorraine Music Academy Pvt. Ltd. Gurugram, India
+Data and Technology Engineer (Full-time) Dec 2020 - Oct 2022
+◦ Audio Recognition Deep Learning Software: Engineered and optimized a deep learning model to analyze user-recorded
+audio samples of piano performances, accurately assessing them and providing feedback. Deployed on a web application
+using Python and EC2.
+◦ Learning Management System Portal: Implemented a learning management system portal that onboarded all customers
+and tracked their progress along with ZOOM video classes and recorded lectures. Deployed using AWS and EC2.
+◦ Startup Fundamentals: Worked closed with the CEO and assisted in building Financial Models, Valuation Reports, and
+Pitch Decks. Pitched to VCs in order to get funding. 2-time cohort member of the world’s 3rd biggest Startup
+Accelerator, IITStartups USA.
+EDUCATION
+•
+Indian Institute of Technology (IIT) Gandhinagar Gandhinagar, India
+Bachelor of Technology July 2017 - June 2021
+◦ Courses:: Advanced Computing, Artificial Intelligence, Networks and Complex Systems, Introduction to Game Development
+AWARDS & ACHIEVEMENTS
+• Achieved an All India Rank (AIR) 5953 (99.4 %ile) in JEE Advanced. Out of 1M+ candidates.
+• Recipient of Explorer’s Fellowship.- from IIT Gandhinagar
+EXTRA CURRICULAR
+•
+Intern, CMS Gandhinagar, India
+Assisted Harvard alums in organizing a two day exhaustive seminar, FLY-(finding the leader in you) May 2018
+•
+Secretary, IITGN Badminton Team Gandhinagar, India
+Ensured smooth functioning of the College Badminton Team. Apr’19-Apr’21
