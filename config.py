@@ -11,4 +11,4 @@ models = ['openai:gpt-3.5-turbo',
           'cohere:command-nightly']
 
 
-openai_api = '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'
+openai_api = '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'
